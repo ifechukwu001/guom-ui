@@ -1,0 +1,26 @@
+{
+  "name": "guom-ui",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.8.2",
+    "@nuxtjs/mdc": "^0.22.0",
+    "nuxt": "^4.0.0",
+    "vue": "^3.5.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "eslint": "^9.29.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^3.3.5"
+  }
+}

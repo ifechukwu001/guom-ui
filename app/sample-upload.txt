@@ -1,0 +1,4 @@
+Sample document context for Guom AI session start test.
+- Product: Multi-tenant analytics SaaS
+- Scope: MVP roadmap
+- Constraints: role-based access, billing, audit logs
