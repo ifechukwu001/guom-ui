@@ -70,7 +70,7 @@
         </form>
       </div>
 
-      <p v-else class="text-sm text-slate-400">
+      <p v-else class="text-xl text-center text-slate-400">
         No plan is available yet for this session.
       </p>
     </template>

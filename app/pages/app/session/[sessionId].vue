@@ -3,13 +3,17 @@
     <div class="flex flex-wrap items-center justify-between gap-3">
       <div>
         <p class="text-sm text-slate-400">Session</p>
-        <h1 class="text-2xl font-semibold text-white">{{ sessionId }}</h1>
+        <h1 class="text-2xl font-semibold text-white">
+          {{ sessionId.slice(0, 8) }}
+        </h1>
       </div>
       <div class="flex items-center gap-2">
         <UBadge v-if="status" :color="statusColor" variant="soft">{{
           status.status
         }}</UBadge>
-        <UBadge v-if="polling" color="neutral" variant="soft">Polling</UBadge>
+        <UBadge v-if="polling" color="neutral" variant="soft"
+          >Wait a moment...</UBadge
+        >
         <UButton
           color="neutral"
           variant="soft"

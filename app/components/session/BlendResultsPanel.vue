@@ -2,9 +2,9 @@
   <SectionPanel>
     <template #header>
       <div>
-        <h2 class="text-lg font-semibold text-white">Blend output</h2>
+        <h2 class="text-lg font-semibold text-white">Blends</h2>
         <p class="text-sm text-slate-400">
-          Cursor-based results from the final session state.
+          Enjoy reading the blends generated from your documents
         </p>
       </div>
       <UBadge variant="soft" color="neutral">{{ items.length }} items</UBadge>

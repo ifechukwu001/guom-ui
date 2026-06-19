@@ -11,9 +11,9 @@
       </template>
 
       <form class="grid gap-4" @submit.prevent="submit">
+        <UAlert v-if="error" color="error" variant="soft" :title="error" />
         <UInput v-model="email" type="email" placeholder="Email" />
         <UInput v-model="password" type="password" placeholder="Password" />
-        <UAlert v-if="error" color="error" variant="soft" :title="error" />
         <div class="flex gap-3">
           <UButton color="primary" type="submit" :loading="loading"
             >Create account</UButton

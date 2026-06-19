@@ -15,9 +15,10 @@
             Guom AI
           </p>
           <p class="mt-2 text-sm text-slate-100">
-            Ask for a product plan, architecture, or implementation outline. I
-            will create a new session and route you to the live review
-            workspace.
+            Guom AI is an AI Agent that reads for you. It can read your
+            documents and summarize them into blends, which you can then review
+            and approve. You can also start sessions to have the AI read your
+            documents in real-time.
           </p>
         </article>
 

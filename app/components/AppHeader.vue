@@ -10,7 +10,7 @@
       </div>
       <div>
         <p class="text-sm font-semibold tracking-wide text-white">Guom AI</p>
-        <p class="text-xs text-slate-400">Session planning workspace</p>
+        <p class="text-xs text-slate-400">AI Agent that reads for you.</p>
       </div>
     </NuxtLink>
 

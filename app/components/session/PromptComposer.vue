@@ -6,7 +6,7 @@
       :rows="3"
       :maxrows="8"
       autoresize
-      placeholder="Message Guom AI..."
+      placeholder="What do you want to learn or read from your documents?"
     />
 
     <div class="chat-composer-actions">
