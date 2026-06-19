@@ -34,19 +34,19 @@ export const useSessionFlow = () => {
   const statusPollInterval = (status?: ApiStatus | null) => {
     switch (status) {
       case "PENDING":
-        return 3500;
+        return 6000;
       case "PLAN":
-        return 5000;
+        return 8000;
       case "REVIEW":
-        return 4500;
+        return 7000;
       case "APPROVED":
-        return 3000;
+        return 6000;
       case "AVAILABLE":
-        return 2500;
+        return 5000;
       case "COMPLETED":
         return 0;
       default:
-        return 4000;
+        return 6500;
     }
   };
 
@@ -73,7 +73,7 @@ export const useSessionFlow = () => {
     targets: ApiStatus[],
     options: { intervalMs?: number; maxAttempts?: number } = {},
   ) => {
-    const fallbackIntervalMs = options.intervalMs ?? 4000;
+    const fallbackIntervalMs = options.intervalMs ?? 6500;
     const maxAttempts = options.maxAttempts ?? 180;
 
     polling.value = true;
@@ -132,7 +132,7 @@ export const useSessionFlow = () => {
       maxCycles?: number;
     } = {},
   ) => {
-    const intervalMs = options.intervalMs ?? 3000;
+    const intervalMs = options.intervalMs ?? 5000;
     const pageLimit = options.pageLimit ?? 10;
     const maxCycles = options.maxCycles ?? 240;
 
@@ -279,7 +279,7 @@ export const useSessionFlow = () => {
 
     await submitReview(feedback);
     return waitForStatuses(currentSessionId.value, ["PLAN", "COMPLETED"], {
-      intervalMs: 4500,
+      intervalMs: 7000,
     });
   };
 
@@ -290,7 +290,7 @@ export const useSessionFlow = () => {
     const status = await waitForStatuses(
       currentSessionId.value,
       ["AVAILABLE", "COMPLETED"],
-      { intervalMs: 3000 },
+      { intervalMs: 5000 },
     );
 
     if (status?.status === "AVAILABLE" || status?.status === "COMPLETED") {
@@ -302,7 +302,7 @@ export const useSessionFlow = () => {
 
   const waitForPlanAfterReview = async (sessionId: string) => {
     const status = await waitForStatuses(sessionId, ["PLAN", "COMPLETED"], {
-      intervalMs: 4500,
+      intervalMs: 7000,
     });
 
     if (status?.status === "PLAN" || status?.status === "COMPLETED") {
@@ -317,7 +317,7 @@ export const useSessionFlow = () => {
       sessionId,
       ["AVAILABLE", "COMPLETED"],
       {
-        intervalMs: 3000,
+        intervalMs: 5000,
       },
     );
 
